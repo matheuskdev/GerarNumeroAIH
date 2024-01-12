@@ -6,21 +6,6 @@ class CalcularAih:
         -ano_referencia: int
         -quinto_digito: int
         -is_inicial: bool
-
-    A numeração de AIH deve obedecer às seguintes regras:\n
-    - Os dígitos 1 e 2 correspondem ao código do IBGE da UF ou 99, caso o tipo de AIH informado seja CNRAC;\n
-    - Os dígitos 3 e 4 correspondem aos dois últimos algarismos do ano de referência. Ex: 24 para 2024;\n
-    - O dígito 5 deverá obedecer a observação citada abaixo;\n
-        "O quinto dígito [da numeração inicial da faixa de AIH] identifica:\n
-        a) 1 (um) que a numeração é de [AIH] – uso geral;\n
-        b) 3 (três) que a numeração é de AIH específica da CNRAC;\n
-        c) 5 (cinco) que a numeração é de AIH específica para os procedimentos cirúrgicos eletivos de média complexidade e Campanhas;\n
-
-    - Os dígitos 6, 7, 8, 9, 10, 11, e 12 obedecem a uma ordem crescente começando por 0000001;\n
-    - O último dígito é o verificador, calculado da seguinte forma: deve-se recuperar o número
-    da AIH informada (removendo o dígito) e dividi-lo por 11. O resto dessa divisão é o DV. Se
-    o resto for igual a 10, o DV é 0.
-
     """
 
     def __init__(self, codigo_ibge_uf: int, ano_referencia: int, quinto_digito: int, is_inicial: bool) -> None:
